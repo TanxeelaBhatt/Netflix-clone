@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap');
+*{
+    padding:0;
+    margin:0;
+    font-family:'poppins', sans-serif;
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+
+}
+body{
+    background-color: black;
+    max-width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    margin:0;
+    padding:0;
+}
+html{
+    
+    -webkit-text-size-adjust: 100%;
+}
+.main{
+    background-image: url("assets/netflixbg.jpg");
+    background-repeat:no-repeat;
+    background-size:max(1200px, 100%);
+    background-position:top center;
+    height:90vh;
+    width:100%;
+    position:relative;
+}
+.main .box{ 
+    /* we added another box of same size of main(dummy box) so that the text  appears clearly  */
+    /* height:90vh; */
+    width:100%;
+    background-color: black;
+    opacity:0.6;
+    position:absolute;
+    top:0;
+    text-align: center;
+    height: 100%;
+    box-sizing: border-box;
+    min-height: 30rem;
+    padding: 7.5rem 0 2rem;
+    object-fit: cover;
+}
+nav{
+    padding:15px 0px;
+    max-width:80vw;
+    height:62px;
+    margin:auto; /* gives equal margin to element on both sides */
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+nav img{
+    color:#e50914;
+    fill: currentColor;
+    display: block;    
+    position:relative;
+    z-index: 10;
+    width: 9.25rem;
+    height: 2.5rem;
+    float:left;
+}
+nav button{
+    position:relative;
+    z-index: 10;
+}
+.text{
+    padding:0 30px;
+    color:white;
+     /* .text takes 100% of its parents height bt nav is set to 62 so we will use calc() */
+    height:calc(100% - 62px); 
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center ;
+    gap:23px;
+    position:relative; /* it'll make text pop out (doen't go behind box) */
+    font-family:  "Martel Sans", sans-serif;
+}
+.text> :first-child{
+    font-weight:900;
+    font-size:48px;
+    text-align: center;
+}
+.text> :nth-child(2){
+    font-weight:500;
+    font-size:24px;
+    text-align: center;
+}
+.text> :nth-child(3){
+    font-weight:400;
+    font-size:20px;
+    text-align: center;
+}
+hr{
+    background-color:rgb(38, 37, 37);
+    border-color: rgb(38, 37, 37);
+}
+.btnclass{
+    display:flex;
+    justify-content: center;
+    gap:23px;
+}
+.btn{
+    background-color:#0f0f0f;
+    color:white;
+    padding:0.45rem 1.5rem;
+    border:0.1px solid rgb(115, 115, 115);
+    border-radius:  0.25rem;
+    font-size: 1rem; 
+    cursor:pointer;   
+    display:inline-flex;
+    align-items: center;
+    gap:6px;
+}
+.signin{
+    background-color:rgb(229, 9, 20);
+    color:white;
+    padding:0.35rem 1.5rem;
+    border:solid rgba(0,0,0,0);
+    border-radius:  0.25rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.red-btn{
+    background-color:red;
+    color:white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    min-height: 2rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.25rem;
+    background: rgb(229, 9, 20);
+    border:solid rgba(0,0,0,0);
+}
+input{
+    background-color:#0f0f0f;
+    color:ivory;
+    opacity:0.66;
+    font-size: 1rem;
+    min-height: 1.9rem;
+    padding: 0.75rem 1.5rem;
+    width:22vw;
+    border-radius: 0.25rem;
+    border:0.1px solid rgb(115, 115, 115);
+}
+
+.email{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:6px;
+}
+.section{
+    color:white;
+    margin:auto;
+    display:flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content:center;
+    align-items:center;
+    /* gap:23px; */
+    /* max-width:100%; */
+    height:57vh;
+    padding: 4.5rem 8rem;
+}
+
+.img1n3{
+    position:relative;
+}
+.img1n3 img{
+    width:100%;
+    position:relative;
+    z-index: 10;
+}
+.img1n3 video{
+    width:100%;
+    position:absolute;
+    top:50px;
+    right:0;
+}
+.section h1{
+    font-weight:900;
+    font-size:48px;
+    font-family:  "Martel Sans", sans-serif;
+}
+.section p{
+    font-weight:600;
+    font-size:24px;
+    font-family:  "Martel Sans", sans-serif;
+    line-height: 1.2;
+}
+.thirdimg>img{
+    position:relative;
+}
+.thirdimg video{
+    width:62%;
+    height:70%;
+    margin-left:70px;
+    position:absolute;
+    top:0;
+    right:0; 
+    left:0;
+    bottom:0;
+}
+section img,video{
+    width:100px;
+    height:auto;
+}
+.faq{
+    color:white;
+    margin:auto;
+    display:flex;
+    flex-direction: column;
+    /* justify-content:center; */
+    align-items:center;
+    gap:10px;
+    max-width:70vw;
+    height:105vh;
+    padding:50px;
+    transition: all 1 ease-out;
+}
+
+.faq>h1{
+    text-align: center;
+    font-weight:900;
+    font-size:48px;
+    font-family:  "Martel Sans", sans-serif;
+}
+.faqbtn{
+    background-color: #2d2d2d;
+    padding: 1.5rem;
+    width: 100%;
+    height:5vh;
+    border: none;
+    cursor: pointer;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+}
+
+.faqbtn:hover{
+    background-color:#3d3d3d;
+}
+.ready>p{
+    padding-top:40px;
+    font-size:24px;
+}
+.downmail{
+    padding-bottom: 30px;
+}
+footer{
+    color:rgb(255, 255, 255);
+    margin:auto;
+    max-height:50vh;
+    padding:34px;
+}
+
+footer> .grid{
+    padding:34px 140px;
+    height:32vh;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr 1fr 1fr; */
+    justify-content: center;
+    align-items:center;
+    /* justify-items: center; */
+    gap:16px;
+}
+.grid>a{
+    color:rgb(186, 182, 182);
+    font-size: 14px;
+
+}
+.grid>div{
+    grid-column:1/5;
+}
+
+@media screen and (min-width: 960px) {
+    .text>h1{
+        font-size: 3rem;
+        font-weight: 900;
+    }
+}
+
+
+@media screen and (max-width:600px){
+  .section{  background-color:pink;
+    flex-wrap:wrap;
+  }
+
+}
+ section img{
+    width:100%;
+    
+ }
